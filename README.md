@@ -28,14 +28,22 @@ $ tkn version
 ```
 
 ## How to install tekton
-Now that you're all using `arkade`, let's keep using it. (ps: `helm` also works, but I'm not good at it)
+Now that you're all using `arkade`, let's keep using it (ps: `helm` also works, but I'm not good at it).
 
 ```bash
 # info: You must have a k8s first!
+
+# step 1: install tekton
 $ ark install tekton
 $ kubectl get ns 
+
+# step 2: port forwrd tekton dashboard
+$ kubectl --namespace tekton-pipelines port-forward svc/tekton-dashboard 9097:9097
 ```
 
+* Tekton Dashboard
+
+![image](https://user-images.githubusercontent.com/39592997/161487787-30a1a0e8-9ff1-4905-8bab-23611ff8b10e.png)
 
 
 
